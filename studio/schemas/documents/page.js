@@ -1,7 +1,5 @@
-import { format } from 'date-fns'
-import components from '../components'
-
-const url = "https://flexible-content-blog-with-svelte-web.netlify.com";
+import { format } from 'date-fns';
+import components from '../components';
 
 export default {
   name: 'page',
@@ -12,7 +10,7 @@ export default {
       name: 'title',
       type: 'string',
       title: 'Page Title',
-      description: 'Enter a title for the page'
+      description: 'Enter a title for the page',
     },
     {
       name: 'slug',
@@ -21,14 +19,14 @@ export default {
       description: 'This will be the pathname of the page.',
       options: {
         source: 'title',
-        maxLength: 96
-      }
+        maxLength: 96,
+      },
     },
     {
       name: 'publishedAt',
       type: 'datetime',
       title: 'Published at',
-      description: 'Set a particular time for this page to go live. Leave blank for it to go live on save/publish.'
+      description: 'Set a particular time for this page to go live. Leave blank for it to go live on save/publish.',
     },
     {
       name: 'components',
@@ -40,7 +38,7 @@ export default {
       options: {
         collapsible: true,
         collapsed: false,
-      }
+      },
     },
   ],
   preview: {
@@ -50,12 +48,12 @@ export default {
       slug: 'slug',
     },
     prepare({ title = 'No title', publishedAt, slug }) {
-      const dateSegment = format(publishedAt, 'YYYY/MM')
-      const path = `Published on: ${dateSegment} URL: /${slug.current}/`
+      const dateSegment = format(publishedAt, 'YYYY/MM');
+      const path = `Published on: ${dateSegment} URL: /${slug.current}/`;
       return {
         title,
-        subtitle: publishedAt ? path : 'Missing publishing date'
-      }
-    }
-  }
-}
+        subtitle: publishedAt ? path : 'Missing publishing date',
+      };
+    },
+  },
+};

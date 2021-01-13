@@ -9,17 +9,17 @@ export default {
       title: 'Image',
       name: 'image',
       type: 'image',
-      validation: Rule => Rule
-        .required()
-    }
+      validation: (Rule) => Rule
+        .required(),
+    },
   ],
   preview: {
     prepare() {
       return {
-        // This below string is what will appear in the 
+        // This below string is what will appear in the
         title: 'Image',
-        media: removeIcon()
-      }
-    }
-  }
-}
+        media: removeIcon(),
+      };
+    },
+  },
+};

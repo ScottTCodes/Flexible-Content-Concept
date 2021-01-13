@@ -10,19 +10,19 @@ export default {
       title: 'Header Text',
       name: 'text',
       type: 'text',
-      validation: Rule =>
-        Rule.required()
-          .min(1)
-          .max(50),
+      validation: (Rule) => Rule
+        .required()
+        .min(1)
+        .max(50),
     },
   ],
   preview: {
     prepare() {
       return {
-        // This below string is what will appear in the 
+        // This below string is what will appear in the
         title: 'Header',
-        media: removeIcon()
-      }
-    }
-  }
+        media: removeIcon(),
+      };
+    },
+  },
 };

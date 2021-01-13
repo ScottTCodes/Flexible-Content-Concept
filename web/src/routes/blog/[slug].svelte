@@ -8,12 +8,12 @@
     } catch (err) {
       this.error(500, err);
     }
-  };
+  }
 </script>
 
 <script>
-  import BlockContent from "@movingbrands/svelte-portable-text";
-  import serializers from "../../components/serializers";
+  import BlockContent from '@movingbrands/svelte-portable-text';
+  import serializers from '../../components/serializers';
 
   export let post;
 </script>

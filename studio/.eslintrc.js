@@ -1,16 +1,24 @@
-const path = require('path')
-
 module.exports = {
-  extends: ['standard', 'standard-react'],
-  parser: 'babel-eslint',
-  rules: {
-    'react/prop-types': 0,
-    'object-curly-spacing': ['error', 'never']
+  extends: [
+    'airbnb-base',
+    'plugin:react/recommended',
+  ],
+  env: {
+    es6: true,
+    browser: true,
   },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+  },
+  plugins: [
+    'react',
+  ],
   settings: {
     react: {
-      pragma: 'React',
-      version: '16.2.0'
-    }
-  }
-}
+      version: '999.999.999',
+    },
+  },
+  ignorePatterns: ['node_nodules/*', 'dist/*', 'plugins/*'],
+};

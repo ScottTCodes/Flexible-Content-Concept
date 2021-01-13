@@ -2,19 +2,19 @@
   export async function preload({ params }) {
     try {
       const res = await this.fetch('api/blog/all');
-      const { posts } = await res.json()
+      const { posts } = await res.json();
       return { posts };
     } catch (err) {
       this.error(500, err);
     }
-  };
+  }
 </script>
 
 <script>
   export let posts;
 
   function formatDate(date) {
-    return new Date(date).toLocaleDateString()
+    return new Date(date).toLocaleDateString();
   }
 </script>
 

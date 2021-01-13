@@ -1,11 +1,12 @@
-import sanityClient from '@sanity/client'
-import { api } from '../../studio/sanity.json'
-const { projectId, dataset } = api
+import sanityClient from '@sanity/client';
+import { api } from '../../studio/sanity.json';
+
+const { projectId, dataset } = api;
 
 const client = sanityClient({
   projectId,
   dataset,
-  useCdn: true
-})
+  useCdn: true,
+});
 
-export default client
+export default client;

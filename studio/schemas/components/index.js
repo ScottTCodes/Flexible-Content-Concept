@@ -3,5 +3,5 @@ import Image from './image';
 
 export default [
   Header,
-  Image
+  Image,
 ];
