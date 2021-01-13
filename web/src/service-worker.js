@@ -1,20 +1,15 @@
-/* eslint-disable
-  import/no-extraneous-dependencies,
-  no-restricted-globals,
-  no-await-in-loop,
-  no-restricted-syntax
-*/
-import { timestamp, files, shell } from '@sapper/service-worker';
+/* eslint-disable */
+import { timestamp, files, shell, routes } from '@sapper/service-worker';
 
 const ASSETS = `cache${timestamp}`;
-const toCache = shell.concat(files);
-const cached = new Set(toCache);
+const to_cache = shell.concat(files);
+const cached = new Set(to_cache);
 
 self.addEventListener('install', (event) => {
   event.waitUntil(
     caches
       .open(ASSETS)
-      .then((cache) => cache.addAll(toCache))
+      .then((cache) => cache.addAll(to_cache))
       .then(() => {
         self.skipWaiting();
       }),
