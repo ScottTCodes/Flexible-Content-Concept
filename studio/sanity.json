@@ -18,6 +18,7 @@
     "dashboard-widget-document-list",
     "dashboard-widget-netlify",
     "@sanity/code-input",
+    "media-library",
     "@sanity/vision"
   ],
   "env": {
